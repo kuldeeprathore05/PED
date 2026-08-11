@@ -4,7 +4,7 @@
 #include<string>
 #include<vector>
 #include<memory>
-// #include<openssl/evp.h>
+#include<openssl/evp.h>
 using namespace std; 
 class Crypto{
   public:
@@ -19,9 +19,11 @@ class Crypto{
     static vector<uint8_t> genRandB(size_t len);
 
     void processChunk(Chunk& chunk);
+    vector<uint8_t> computeChunkIV(uint64_t chunk_id) const;
 
   private:
     vector<uint8_t> key;
     vector<uint8_t> base_iv;
+    EVP_CIPHER_CTX * ctx;
 
 };

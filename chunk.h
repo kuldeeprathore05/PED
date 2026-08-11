@@ -1,5 +1,6 @@
 #pragma once
 #include<vector>
+#include <cstdint>
 using namespace std;
 inline constexpr size_t CHUNK_SIZ = 4*1024*1024;
 inline constexpr size_t QUEUE_CAP = 16;

@@ -1,0 +1,9 @@
+# Your compiled program
+*.exe
+
+# Your test data and encrypted files
+*.txt
+*.enc
+
+# Your local VS Code MSYS2 settings
+.vscode/
